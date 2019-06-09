@@ -8,7 +8,7 @@
 #  See http://www.gnu.org/licenses/gpl.html for the full license.
 #########################################################################
 
-use strict
+use strict;
 use FindBin qw($RealBin);
 use lib "$RealBin/src";
 use lib "$RealBin/src/deps";
