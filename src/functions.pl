@@ -324,9 +324,6 @@ sub loadDataFiles {
 	}
 
 	Log::message("\n");
-	if ($Settings::travis_ci) {
-		exit(0);
-	}
 }
 
 sub initNetworking {
@@ -431,6 +428,7 @@ sub promptFirstTimeInformation {
 
 sub processServerSettings {
 	my $filename = shift;
+	exit(0) if ($Settings::travis_ci);
 	# Select Master server on Demand
 
 	if ($config{master} eq "" || $config{master} =~ /^\d+$/ || !exists $masterServers{$config{master}}) {
