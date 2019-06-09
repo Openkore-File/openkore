@@ -58,7 +58,7 @@ my $frame;
 my $sizer;
 my $mapview;
 my $status;
-
+my $success;
 my $field;
 my $bus;
 my $state;
