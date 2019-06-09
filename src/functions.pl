@@ -324,6 +324,9 @@ sub loadDataFiles {
 	}
 
 	Log::message("\n");
+	if ($Settings::travis_ci) {
+		exit(0);
+	}
 }
 
 sub initNetworking {
@@ -554,9 +557,6 @@ sub finalInitialization {
 	Log::message("\n");
 
 	Log::message("Initialized, use 'connect' to continue\n") if $Settings::no_connect;
-	if ($Settings::travis_ci) {
-		exit(0);
-	}
 	Plugins::callHook('initialized');
 	XSTools::initVersion();
 }
