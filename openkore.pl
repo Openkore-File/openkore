@@ -89,7 +89,7 @@ sub __start {
 		ChatQueue Actor Actor::Player Actor::Monster Actor::You
 		Actor::Party Actor::Unknown Actor::Item Match Utils::Benchmark/);
 
-
+	my $hehe;
 	##### MAIN LOOP #####
 	# Note: Further initialization is done in the mainLoop() function in functions.pl.
 
